@@ -3,11 +3,13 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #cfd8e1;
+        fill: #838f9d;
       }
     </style>
   </defs>
-  <g id="_Слой_1-2" data-name="Слой 1">
-    <polygon id="marker_select" class="cls-1" points="15 25.98 30 0 0 0 15 25.98"/>
+  <g id="_Слой_2-2" data-name=" Слой 2">
+    <g id="_Слой_1-2" data-name=" Слой 1-2">
+      <polygon id="marker_select" data-name="marker select" class="cls-1" points="15 25.98 30 0 0 0 15 25.98"/>
+    </g>
   </g>
 </svg>
