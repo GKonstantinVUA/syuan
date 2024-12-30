@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.1 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ed2227;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <g id="location_smart">
+      <rect class="cls-1" x=".93" y="2.61" width="15.84" height="25.06"/>
+      <path class="cls-2" d="M0,0v30h18.1V0H0ZM15.78,25.71H2.32V4.29h13.46v21.41Z"/>
+    </g>
+  </g>
+</svg>
