@@ -511,5 +511,30 @@
             }));
         }
     }), 0);
+    let center = [ 60.10586756394763, 30.213577 ];
+    function init() {
+        let map = new ymaps.Map("map", {
+            center,
+            zoom: 17
+        });
+        let placemark = new ymaps.Placemark(center, {
+            balloonContent: `\n\t\t\t\t\n\t\t\t\t<div  class="balloon balloon--location">\n\t\t\t\t\t<div  class="balloon__content">\n\t\t\t\t\t\t<div class="balloon__body">\n\t\t\t\t\t\t\t<a href="tel:89111601199" target="_blank" class="balloon__item balloon__item--tel">8(911) 160-11-99</a>\n\t\t\t\t\t\t\t<div class="balloon__item balloon__item--nomarker">Санкт-Петербург, Парголово, Вокзальное шоссе д.71</div>\n\t\t\t\t\t\t\t<a href="mailto:info@asphaitok.ru" target="_blank" class="balloon__item balloon__item--mail">info@asphaitok.ru</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t`
+        }, {
+            iconLayout: "default#image",
+            iconImageHref: "../../img/items_svg/marker_map.svg",
+            iconImageSize: [ 82, 120 ],
+            iconImageOffset: [ -40, -124 ]
+        });
+        map.controls.remove("geolocationControl");
+        map.controls.remove("searchControl");
+        map.controls.remove("trafficControl");
+        map.controls.remove("typeSelector");
+        map.controls.remove("fullscreenControl");
+        map.controls.remove("zoomControl");
+        map.controls.remove("rulerControl");
+        map.geoObjects.add(placemark);
+        placemark.balloon.open();
+    }
+    ymaps.ready(init);
     window["FLS"] = false;
 })();

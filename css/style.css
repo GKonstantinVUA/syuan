@@ -729,44 +729,21 @@ body {
   min-height: 39.8125rem;
   width: 100%
 }
-.map__location {
+.balloon__content {
   font-size: 1.125rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  max-width: 36.25rem;
-  background-color: var(--bgMain);
-  border-radius: 1.25rem;
-  -webkit-transform: translate(30%,40%);
-  transform: translate(30%,40%)
+  max-width: 38.75rem;
+  background-color: var(--bgMain)
 }
-.map__location::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%
-}
-.location__body {
-  padding: 2.625rem 3.5rem;
+.balloon__body {
+  padding: 2.5rem 0 1.875rem 1.25rem;
   display: flex;
   height: 100%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  row-gap: 1.75rem;
-  position: relative
+  row-gap: 1.75rem
 }
-.location__body::before {
-  content: "";
-  position: absolute;
-  left: -7%;
-  top: -15%;
-  width: 4.5rem;
-  height: 4.5rem;
-  background: url(../img/items_svg/marker_location.svg) center/4.5rem no-repeat
-}
-.location__item {
+.balloon__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -774,23 +751,46 @@ body {
   -moz-column-gap: .75rem;
   column-gap: .75rem
 }
-.location__item--tel::before {
+.balloon__item--tel::before {
   content: "";
   width: 1.125rem;
   height: 1.375rem;
   background: url(../img/items_svg/location_smart.svg) center/1.125rem 1.375rem no-repeat
 }
-.location__item--nomarker::before {
+.balloon__item--nomarker::before {
   content: "";
-  width: 1.125rem;
+  width: 1.625rem;
   height: 1.375rem;
   background: url(../img/items_svg/location_address.svg) center/1.125rem 1.375rem no-repeat
 }
-.location__item--mail::before {
+.balloon__item--mail::before {
   content: "";
   width: 1.125rem;
   height: 1.375rem;
   background: url(../img/items_svg/location_envelope.svg) center/1.125rem 1.375rem no-repeat
+}
+[class*=balloon_layout] {
+  width: 460px;
+  position: relative
+}
+[class*=balloon_layout]::before {
+  content: "";
+  position: absolute;
+  left: -7%;
+  top: -15%;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: url(../img/items_svg/marker_location.svg) center/4.5rem no-repeat;
+  z-index: 2
+}
+[class*=balloon__close-button] {
+  background: url(../img/items_svg/balloon_close_button.svg) 50%/18px 18px no-repeat!important
+}
+[class*=balloon__layout] {
+  border-radius: .75rem
+}
+[class*=balloon_layout_normal] {
+  border-radius: .75rem
 }
 body {
   background-color: #fff
@@ -879,6 +879,9 @@ body {
 .item-bike__price {
   white-space: nowrap
 }
+.characteristic--setup:not(:last-child) {
+  margin-bottom: 4.375rem
+}
 .characteristic__container {
   display: flex;
   height: 100%;
@@ -961,6 +964,32 @@ body {
 }
 .description__total-cost {
   color: var(--fnSubFont)
+}
+.map {
+  position: relative
+}
+.map__main-block {
+  max-width: 100svw;
+  min-height: 39.8125rem;
+  width: 100%
+}
+.map__location {
+  font-size: 1.125rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 36.25rem;
+  background-color: var(--bgMain);
+  border-radius: 1.25rem;
+  -webkit-transform: translate(30%,40%);
+  transform: translate(30%,40%)
+}
+.map__location::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
 }
 @media (any-hover:hover) {
   .select__option:hover {
